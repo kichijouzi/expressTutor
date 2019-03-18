@@ -1,10 +1,10 @@
-import express, { Request, Response } from 'express'
+import * as express from 'express'
 const app = express()
 const test01 = require('./routes/test01')
 
 app.get(
   '/',
-  (req: Request, res: Response) => {
+  (req: express.Request, res: express.Response) => {
     return res.send('hello')
   }
 )
@@ -18,4 +18,4 @@ app.listen(
   }
 )
 
-export default app
+module.exports = app
