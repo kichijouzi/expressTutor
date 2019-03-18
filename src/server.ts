@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express'
 const app = express()
+const test01 = require('./routes/test01')
 
 app.get(
   '/',
@@ -7,6 +8,8 @@ app.get(
     return res.send('hello')
   }
 )
+
+app.use('/test01/', test01)
 
 app.listen(
   3000,
