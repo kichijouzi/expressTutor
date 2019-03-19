@@ -1,5 +1,6 @@
 import * as express from 'express'
 import bodyParser = require('body-parser');
+import { DataStore } from '../modules/dataStore/dataStore'
 const router = express.Router()
 
 router.use(bodyParser.json())
@@ -9,7 +10,10 @@ router.get('/', (req: express.Request, res: express.Response) => {
 })
 
 router.post('/', (req: express.Request, res: express.Response) => {
-  const retVal = { title: req.body.title, description: 'jsontest'}
+  const retVal = { name: req.body.name, description: 'sample'}
+  const data = new DataStore()
+  data.addData(retVal.name, retVal.description)
+  data.disp()
   res.json(retVal)
 })
 
