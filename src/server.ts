@@ -18,11 +18,4 @@ app.get(
 
 app.use('/test01', test01)
 
-// app.listen(
-//   3000,
-//   () => {
-//     console.log('listen port 3000')
-//   }
-// )
-
 module.exports = app

@@ -9,7 +9,8 @@ router.get('/', (req: express.Request, res: express.Response) => {
 })
 
 router.post('/', (req: express.Request, res: express.Response) => {
-  res.send(req.body.title)
+  const retVal = { title: req.body.title, description: 'jsontest'}
+  res.json(retVal)
 })
 
 router.get('/about', (req: express.Request, res: express.Response) => {

@@ -12,9 +12,9 @@
   },
   "scripts": {
     "test": "jest",
-    "dev": "parcel --target node ./src/server.ts",
-    "build": "parcel build --target node ./src/server.ts",
-    "start": "node dist/server.js",
+    "dev": "parcel --target node ./src/index.ts",
+    "build": "parcel build --target node ./src/index.ts",
+    "start": "node dist/index.js",
     "type-check": "tsc --noEmit"
   },
   "devDependencies": {
